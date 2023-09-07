@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting started with JavaScript</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <button type="button" class="btn btn-danger" onclick="saySomething('this is the first button')">
+            My Button
+        </button>
+        <button type="button" class="btn btn-danger" onclick="saySomething('this is the second button')">
+            My 2nd Button
+        </button>
+    </div>
+
+
+  <!--🔥🔥🔥start JavaScript🔥🔥🔥-->
+  <script>
+    function saySomething(message = 'goodbye', whisper = false) {
+        if (whisper) {
+            console.log(`%c${message}`, 'font-size:5px');
+        } else {
+            console.log(message);
+        }
+    }
+
+    saySomething('hello', true);
+    saySomething('my name is chris', true);
+    saySomething();
+
+    // function squared(a) {
+    //     return a * a;
+    // }
+
+    // const newSquared = squared(3);
+    // console.log(newSquared);
+
+    const squared = function(a) {
+        return a * a;
+    }
+    const otherSquared = squared;
+
+    // change the const squared = function(a) into an arrow function
+    // const squared = (a) => {
+    //     return a * a;
+    // }
+
+    // example of hoisting is calling the function BEFORE it's declared (defined) in the code
+    // declared variables such as const squared = ... DON'T get hoisted
+    // ONLY function declarations get hoisted such as function punch()... get hoisted to the TOP of your code
+
+    punch();
+
+    function punch() {
+        console.log('punch here!');
+    }
+  </script>
+</body>
+
+</html>
