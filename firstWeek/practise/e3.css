@@ -1,0 +1,38 @@
+/* below code keeps the ID element at the top left securely */
+
+#static {
+    position: static;
+}
+
+/* below code moves the ID element 30px from where(relatively) it was positioned */
+
+/* #relative {
+    position: relative;
+    left: 30px;
+    top: 30px;
+} */
+
+/* below code keeps the ID element exactly where you place it */
+
+/* #absolute {
+    position: absolute;
+    left: 60px;
+    top: 60px;
+} */
+
+/* below code keeps the ID element at the bottom right securely */
+
+/* #fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+} */
+
+/* for relative: higher z-index(instead of 0) value will cover overlapping elements  */
+
+/* #relative {
+    position: relative;
+    left: 30px;
+    top: 30px;
+    z-index: 1;
+} */
