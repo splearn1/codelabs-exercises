@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multiple Buttons DOM Exercise</title>
+</head>
+<body>
+
+<!-- Button with inline event handler -->
+
+<button class="btn_onclick">Button 1</button>
+<button class="btn_onclick">Button 2</button>
+<button class="btn_onclick">Button 3</button>
+
+<script>
+
+    let buttons = document.querySelectorAll('.btn_onclick');
+
+    function changeBackground() {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+        document.body.style.backgroundColor = `#${randomColor}`;
+    }
+
+    buttons.forEach((button => {
+        button.addEventListener('click', changeBackground)
+    }));
+
+</script>
+
+</body>
+</html>
