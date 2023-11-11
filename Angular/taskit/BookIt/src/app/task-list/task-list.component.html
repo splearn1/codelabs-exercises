@@ -5,7 +5,7 @@
     <select class="p-2" name="status" id="status">
       <option value="complete">Complete</option>
       <option value="pending">Pending</option>
-      <option value="in progress">In Progress</option>
+      <option value="in-progress">In Progress</option>
     </select>
     <select class="p-2" name="sort" id="sort">
       <option value="date">Date</option>
@@ -17,11 +17,11 @@
       <option value="medium">Medium</option>
       <option value="low">Low</option>
     </select>
-    <div class="p-2 ml-auto"><button class="btn btn-success">Manage</button></div>
+    <div class="ms-auto p-2"><button class="btn btn-success" (click)="addNewTask()">Add New Task</button></div>
   </div>
 
   <div class="task-table">
-    <table class="table table-striped">
+    <table class="table">
       <thead>
         <tr>
           <th>Title</th>
@@ -32,27 +32,26 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>XXX</td>
-          <td>XXX</td>
-          <td>XXX</td>
-          <td>XXX</td>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{task.name}}</td>
+          <td>{{task.dueDate | date:'MM/dd/yyyy'}}</td>
+          <td>{{task.priority}}</td>
+          <td>{{task.status}}</td>
+          <td>
+            <div class="d-flex flex-row">
+              <div><span class="material-symbols-outlined">
+              visibility
+              </span></div>
+              <div><span class="material-symbols-outlined">
+                edit_square
+                </span></div>
+            <div><span class="material-symbols-outlined">
+              delete
+              </span></div>
+            </div>
+          </td>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>XXX</td>
-          <td>XXX</td>
-          <td>XXX</td>
-          <td>XXX</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>XXX</td>
-          <td>XXX</td>
-          <td>XXX</td>
-          <td>XXX</td>
-        </tr>
+
       </tbody>
     </table>
   </div>

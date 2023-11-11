@@ -1,6 +1,21 @@
-<div class="container">
-  <span style="font-size: 1.75rem; margin-top: 100px">
-    <b><span style="color: green">TASK</span>IT</b>
-  </span>
-  <div>Suzy</div>
+<div class="sidebar-container d-flex flex-column">
+  <!-- sidebar header -->
+  <div class="p-2 d-flex flex-column">
+    <span style="font-size: 1.75rem">
+      <b><span style="color: green">TASK</span>IT</b>
+    </span>
+    <button class="btn btn-success p-2" style="margin-top: 50px">
+      Task List
+    </button>
+    <button class="btn btn-success p-2">KanBan</button>
+    <button class="btn btn-success p-2" (click)="getRandomTask()">Bored</button>
+  </div>
+  <!-- profile section -->
+  <div class="d-flex flex-row mt-auto p-2 border border-end-0">
+    <img src="http://source.unsplash.com/50x50/?profile" alt="Suzy's friend" />
+    <div class="d-flex flex-column"><span style="font-size: 14px;">Suzy</span> <span style="font-size: 12px;">email@mine.com</span></div>
+    <span class="material-symbols-outlined">
+      logout
+      </span>
+  </div>
 </div>

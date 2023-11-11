@@ -1,1 +1,6 @@
-
+.sidebar-container {
+  height: 100vh;
+}
+.btn {
+  margin: 15px;
+}
