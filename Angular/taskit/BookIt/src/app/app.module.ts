@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TaskModalComponent } from './task-modal/task-modal.component';
+import { TaskModal } from './task-modal/task-modal.component';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -21,7 +21,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     AppComponent,
     SidebarComponent,
     TaskListComponent,
-    TaskModalComponent
+    TaskModal
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatNativeDateModule,
     MatDatepickerModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

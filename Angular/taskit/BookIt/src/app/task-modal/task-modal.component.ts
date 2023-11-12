@@ -8,10 +8,10 @@ import { Task } from '../shared/task.model';
   templateUrl: './task-modal.component.html',
   styleUrls: ['./task-modal.component.css']
 })
-export class TaskModalComponent {
+export class TaskModal {
 
   constructor(
-    public dialogRef: MatDialogRef<TaskModalComponent>,
+    public dialogRef: MatDialogRef<TaskModal>,
     @Inject(MAT_DIALOG_DATA) public data: Task,
   ) {}
 

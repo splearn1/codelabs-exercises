@@ -37,15 +37,15 @@
           <td>{{task.dueDate | date:'MM/dd/yyyy'}}</td>
           <td>{{task.priority}}</td>
           <td>{{task.status}}</td>
-          <td>
+          <td style="cursor: pointer;">
             <div class="d-flex flex-row">
-              <div><span class="material-symbols-outlined">
+              <!-- <div><span class="material-symbols-outlined">
               visibility
-              </span></div>
-              <div><span class="material-symbols-outlined">
+              </span></div> -->
+              <div><span class="material-symbols-outlined" (click)="onUpdate(i)">
                 edit_square
                 </span></div>
-            <div><span class="material-symbols-outlined">
+            <div><span class="material-symbols-outlined" (click)="onDelete(i)">
               delete
               </span></div>
             </div>
