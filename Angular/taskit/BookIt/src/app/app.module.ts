@@ -15,13 +15,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AlertModalComponent } from './shared/alert-modal/alert-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     TaskListComponent,
-    TaskModal
+    TaskModal,
+    AlertModalComponent
   ],
   imports: [
     BrowserModule,

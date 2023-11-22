@@ -28,3 +28,14 @@ delete Task(index: number) {
 }
 
 
+
+Casting (Max's videos)
+(<FormArray>this.recipeForm.get('ingredients)).push(new FormGroup({'name': new FormContro(), 'amount': new FormControl()}))
+
+
+http
+.get<{[key:string]: Post}>
+
+.get<Recipe[]>
+
+intercept(req:HttpRequest<any>, next:HttpHandler)
